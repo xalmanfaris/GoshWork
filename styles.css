@@ -42,6 +42,21 @@ main {
     padding-top: 77px;
 }
 
+.breadcrumb {
+    margin-bottom: 24px;
+    font-size: 0.9rem;
+    color: #64748B;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.breadcrumb .current-page {
+    color: black;
+    font-weight: 500;
+}
+
 h1 {
     font-size: 3.5rem;
     font-weight: 700;
@@ -207,7 +222,7 @@ footer .logo-container {
 .hero .section-content {
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 64px;
     height: auto;
     width: 100%;
     max-width: 1240px;
@@ -353,7 +368,8 @@ footer .logo-container {
 
 .badge-group {
     display: flex;
-    gap: 4px;
+    flex-wrap: wrap;
+    gap: 8px;
     margin-bottom: 8px;
 }
 
@@ -378,15 +394,18 @@ footer .logo-container {
 }
 
 .badge-shipping {
-    width: 156px;
+    width: auto;
+    min-width: 156px;
 }
 
 .badge-returns {
-    width: 243px;
+    width: auto;
+    min-width: 243px;
 }
 
 .badge-certs {
-    width: 297px;
+    width: auto;
+    min-width: 297px;
 }
 
 
@@ -444,13 +463,16 @@ footer .logo-container {
 
 .carousel-wrapper {
     position: relative;
-    width: 570px;
+    width: 100%;
+    max-width: 570px;
 }
 
 .carousel-container {
     position: relative;
-    width: 570px;
-    height: 570px;
+    width: 100%;
+    max-width: 570px;
+    height: auto;
+    aspect-ratio: 1 / 1;
     background: #E2E8F0;
     border-radius: 32px;
     overflow: hidden;
@@ -503,10 +525,12 @@ footer .logo-container {
 
 .thumbnails {
     display: flex;
-    gap: 18px;
+    gap: 12px;
     margin-top: 20px;
-    width: 570px;
-    justify-content: space-between;
+    width: 100%;
+    max-width: 570px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .thumb {
@@ -564,7 +588,7 @@ footer .logo-container {
 #specs {
     width: 100%;
     max-width: 1600px;
-    height: 1114px;
+    height: auto;
     margin: 0 auto;
     background: #111827;
     padding: 100px 0;
@@ -598,7 +622,7 @@ footer .logo-container {
 .specs-title {
     width: 100%;
     max-width: 800px;
-    height: 58px;
+    height: auto;
     font-family: 'Urbanist', sans-serif;
     font-weight: 700;
     font-size: 48px;
@@ -610,7 +634,7 @@ footer .logo-container {
 .specs-description {
     width: 100%;
     max-width: 800px;
-    height: 58px;
+    height: auto;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 18px;
@@ -664,7 +688,7 @@ footer .logo-container {
 #final-cta {
     width: 100%;
     max-width: 1600px;
-    height: 1094px;
+    height: auto;
     margin: 0 auto;
     position: relative;
     padding: 80px 0;
@@ -690,8 +714,9 @@ footer .logo-container {
 }
 
 #final-cta .portfolio-header {
-    width: 1240px;
-    height: 131px;
+    width: 100%;
+    max-width: 1240px;
+    height: auto;
     text-align: center;
     margin: 0 auto 60px;
     display: flex;
@@ -701,8 +726,9 @@ footer .logo-container {
 }
 
 #final-cta .portfolio-header h2 {
-    width: 800px;
-    height: 53px;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
     font-family: 'Urbanist', sans-serif;
     font-weight: 700;
     font-size: 44px;
@@ -712,8 +738,9 @@ footer .logo-container {
 }
 
 #final-cta .portfolio-header p {
-    width: 800px;
-    height: 58px;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 18px;
@@ -726,14 +753,16 @@ footer .logo-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
-    width: 1240px;
-    height: 486.67px;
+    width: 100%;
+    max-width: 1240px;
+    height: auto;
     margin: 0 auto;
 }
 
 .portfolio-card {
-    width: 397.33px;
-    height: 486.67px;
+    width: 100%;
+    height: auto;
+    min-height: 486.67px;
     background: #FFFFFF;
     border: 1px solid #E1E3E8;
     border-radius: 20px;
@@ -746,8 +775,8 @@ footer .logo-container {
 }
 
 .portfolio-card h3 {
-    width: 349.33px;
-    height: 34px;
+    width: 100%;
+    height: auto;
     font-family: 'Urbanist', sans-serif;
     font-weight: 600;
     font-size: 28px;
@@ -757,8 +786,9 @@ footer .logo-container {
 }
 
 .portfolio-card p {
-    width: 349.33px;
-    height: 96px;
+    width: 100%;
+    height: auto;
+    min-height: 96px;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -770,23 +800,23 @@ footer .logo-container {
 }
 
 .portfolio-image-group {
-    width: 349.33px;
-    height: 238.67px;
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
-
 }
 
 .portfolio-card img {
-    width: 349.33px;
-    height: 174.67px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
     border-radius: 16px;
 }
 
 .btn-learn-more {
-    width: 349.33px;
+    width: 100%;
     height: 44px;
     background: #F7F8F9;
     border: 1px solid #E1E3E8;
@@ -814,7 +844,7 @@ footer .logo-container {
 #final-footer-section {
     width: 100%;
     max-width: 1600px;
-    height: 531px;
+    height: auto;
     margin: 0 auto;
     position: relative;
     padding: 100px 0;
@@ -850,8 +880,10 @@ footer .logo-container {
 }
 
 .expert-cta-banner {
-    width: 1280px;
-    height: 107px;
+    width: 100%;
+    max-width: 1280px;
+    height: auto;
+    min-height: 107px;
     margin: 80px auto 0;
     background: #FFFFFF;
     border: 1px solid #CFD1D4;
@@ -865,16 +897,18 @@ footer .logo-container {
 }
 
 .expert-cta-content {
-    width: 651px;
-    height: 67px;
+    width: 100%;
+    max-width: 651px;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
 .expert-cta-content h3 {
-    width: 651px;
-    height: 31px;
+    width: 100%;
+    max-width: 651px;
+    height: auto;
     font-family: 'Urbanist', sans-serif;
     font-weight: 600;
     font-size: 26px;
@@ -898,7 +932,8 @@ footer .logo-container {
 }
 
 .btn-talk-expert {
-    width: 187px;
+    width: 100%;
+    max-width: 187px;
     height: 44px;
     background: #2B3990;
     color: #FFFFFF;
@@ -952,8 +987,10 @@ footer .logo-container {
     background: #FFFFFF;
     border: 1px solid #E1E3E8;
     border-radius: 10px;
-    width: 1240px;
-    height: 144px;
+    width: 100%;
+    max-width: 1240px;
+    height: auto;
+    min-height: 144px;
     margin: 0 auto;
     padding: 20px;
     display: flex;
@@ -967,8 +1004,10 @@ footer .logo-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1200px;
-    height: 24px;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    min-height: 24px;
     transition: background 0.2s ease;
 }
 
@@ -1005,7 +1044,7 @@ footer .logo-container {
 #final-contact-section {
     width: 100%;
     max-width: 1600px;
-    height: 672px;
+    height: auto;
     margin: 0 auto;
     position: relative;
     padding: 100px 0;
@@ -1058,8 +1097,10 @@ footer .logo-container {
     background: #FFFFFF;
     border: 1px solid var(--footer-border);
     border-radius: 20px;
-    width: 1240px;
-    height: 122px;
+    width: 100%;
+    max-width: 1240px;
+    height: auto;
+    min-height: 122px;
     padding: 32px;
     display: flex;
     justify-content: space-between;
@@ -1077,7 +1118,8 @@ footer .logo-container {
 
 .branded-footer-bar .tagline-side {
     display: block;
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     height: auto;
     font-family: 'Urbanist', sans-serif;
     font-size: 20px;
@@ -1237,8 +1279,10 @@ footer .logo-container {
 .contact-blue-box {
     position: relative;
     z-index: 1;
-    width: 1240px;
-    height: 472px;
+    width: 100%;
+    max-width: 1240px;
+    height: auto;
+    min-height: 472px;
     background: linear-gradient(0deg, #2B3990, #2B3990),
         linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
     border-radius: 32px;
@@ -1292,7 +1336,8 @@ footer .logo-container {
 }
 
 .contact-form-card {
-    width: 440px;
+    width: 100%;
+    max-width: 440px;
     background: #FFFFFF;
     border-radius: 24px;
     padding: 32px;
@@ -1362,10 +1407,10 @@ footer .logo-container {
 #testimonials {
     width: 100%;
     max-width: 1600px;
-    height: 789px;
+    height: auto;
     margin: 0 auto;
     position: relative;
-    padding: 100px;
+    padding: 100px 0;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -1403,8 +1448,9 @@ footer .logo-container {
 }
 
 .testimonials-header {
-    width: 1240px;
-    height: 131px;
+    width: 100%;
+    max-width: 1240px;
+    height: auto;
     text-align: center;
     margin: 0 auto;
     display: flex;
@@ -1414,8 +1460,9 @@ footer .logo-container {
 }
 
 .testimonials-header h2 {
-    width: 800px;
-    height: 53px;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
     font-family: 'Urbanist', sans-serif;
     font-weight: 700;
     font-size: 44px;
@@ -1444,15 +1491,17 @@ footer .logo-container {
 .testimonials-grid {
     display: flex;
     gap: 24px;
-    width: 2640px;
+    width: auto;
     padding: 0 50px;
     transition: transform 0.5s ease;
 }
 
 .testimonial-card {
-    width: 420px;
-    min-width: 420px;
-    height: 402px;
+    width: 100%;
+    max-width: 420px;
+    min-width: 300px;
+    height: auto;
+    min-height: 402px;
     background: #F7F8F9;
     border: 1.5px solid #E1E3E8;
     border-radius: 24px;
@@ -1671,13 +1720,15 @@ footer .logo-container {
 .process-detail {
     display: flex;
     gap: 56px;
-    height: 315px;
+    height: auto;
+    min-height: 315px;
     flex-wrap: nowrap;
 }
 
 .process-detail-info {
-    width: 560px;
-    flex-shrink: 0;
+    width: 100%;
+    max-width: 560px;
+    flex-shrink: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1730,12 +1781,14 @@ footer .logo-container {
 }
 
 .process-detail-image {
-    width: 560px;
-    height: 315px;
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    aspect-ratio: 16 / 9;
     border-radius: 16px;
     overflow: hidden;
     position: relative;
-    flex-shrink: 0;
+    flex-shrink: 1;
 }
 
 .process-detail-image img {
@@ -1891,7 +1944,7 @@ footer .logo-container {
     overflow: hidden;
     position: relative;
     cursor: pointer;
-    flex-shrink: 0;
+    flex-shrink: 1;
 }
 
 .app-card img {
@@ -1916,16 +1969,18 @@ footer .logo-container {
 }
 
 .app-card-content {
-    width: 372px;
-    height: 139px;
+    width: 100%;
+    max-width: 372px;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
 .app-card h3 {
-    width: 350px;
-    height: 31px;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
     font-family: 'Urbanist', sans-serif;
     font-weight: 500;
     font-size: 26px;
@@ -1935,8 +1990,10 @@ footer .logo-container {
 }
 
 .app-card p {
-    width: 350px;
-    height: 96px;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    min-height: 96px;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -2058,7 +2115,8 @@ footer .logo-container {
 }
 
 .btn-request {
-    width: 174px;
+    width: 100%;
+    max-width: 174px;
     height: 52px;
     background: #2B3990;
     color: white;
@@ -2110,7 +2168,8 @@ footer .logo-container {
 }
 
 .btn-download {
-    width: 325px;
+    width: 100%;
+    max-width: 325px;
     height: 52px;
     background: transparent;
     border: 1px solid #FFFFFF;
@@ -2144,7 +2203,7 @@ footer .logo-container {
     width: 100%;
     max-width: 1600px;
     height: auto;
-    min-height: 924px;
+    min-height: auto;
     margin: 0 auto;
     position: relative;
     padding: 100px 0;
@@ -2178,7 +2237,7 @@ footer .logo-container {
 
 .faq-title {
     width: 100%;
-    height: 53px;
+    height: auto;
     font-family: 'Urbanist', sans-serif;
     font-weight: 700;
     font-size: 44px;
@@ -2361,13 +2420,12 @@ textarea:focus {
 
 .social-proof-strip {
     width: 100%;
-    height: 92px;
-    margin: 0 auto;
+    height: auto;
+    margin: 40px auto 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    opacity: 1;
 }
 
 .trusted-text {
@@ -2388,13 +2446,12 @@ textarea:focus {
 
 .logo-group {
     width: 100%;
-    height: 48px;
+    height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transform: rotate(0deg);
-    opacity: 1;
-    margin: 0;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .euroflex-logo {
@@ -2449,7 +2506,7 @@ textarea:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 120px;
+    gap: 40px;
     box-shadow: 0px 16px 40px -8px rgba(88, 92, 95, 0.16);
     box-sizing: border-box;
     position: relative;
@@ -2645,8 +2702,12 @@ textarea:focus {
 }
 
 @media (max-width: 1024px) {
-    .container, .section-content, .nav-bar, .hero .section-content {
-        padding: 0 24px !important;
+
+    .container,
+    .section-content,
+    .nav-bar,
+    .hero .section-content {
+        padding: 0 20px !important;
         max-width: 100% !important;
     }
 
@@ -2655,7 +2716,44 @@ textarea:focus {
         gap: 40px !important;
     }
 
-    .carousel-wrapper, .carousel-container, .thumbnails {
+    .hero-content {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .hero-intro-group {
+        width: 100% !important;
+        text-align: center !important;
+        align-items: center !important;
+    }
+
+    .cert-badges {
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+    }
+
+    .feature-list {
+        display: inline-block !important;
+        text-align: left !important;
+        margin: 0 auto 32px !important;
+    }
+
+    .logo-group {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 20px !important;
+        height: auto !important;
+    }
+
+    .euroflex-logo {
+        width: 120px !important;
+    }
+
+    .carousel-wrapper,
+    .carousel-container,
+    .thumbnails {
         width: 100% !important;
         max-width: 100% !important;
     }
@@ -2665,28 +2763,42 @@ textarea:focus {
         aspect-ratio: 1/1 !important;
     }
 
-    .features-grid, .portfolio-grid, .process-grid, .footer-grid {
+    .features-grid,
+    .portfolio-grid,
+    .process-grid,
+    .footer-grid {
         grid-template-columns: 1fr !important;
         gap: 32px !important;
     }
 
-    .expert-cta-banner, .downloads-container, .contact-blue-box, .branded-footer-bar {
+    .expert-cta-banner,
+    .downloads-container,
+    .contact-blue-box,
+    .branded-footer-bar {
         width: 100% !important;
         max-width: 100% !important;
         height: auto !important;
         flex-direction: column !important;
-        padding: 32px 24px !important;
+        padding: 32px 20px !important;
         text-align: center !important;
+        gap: 32px !important;
     }
 
-    .expert-cta-content, .download-row, .tagline-side, .contact-info-side, .contact-form-card {
+    .expert-cta-content,
+    .download-row,
+    .tagline-side,
+    .contact-info-side,
+    .contact-form-card {
         width: 100% !important;
         max-width: 100% !important;
         height: auto !important;
         text-align: center !important;
     }
 
-    .portfolio-card, .app-card, .feature-card, .pricing-card {
+    .portfolio-card,
+    .app-card,
+    .feature-card,
+    .pricing-card {
         width: 100% !important;
         max-width: 100% !important;
         height: auto !important;
@@ -2730,21 +2842,40 @@ textarea:focus {
 }
 
 @media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 32px !important;
+
+    .hero-content h1,
+    .hero-title {
+        font-size: clamp(28px, 8vw, 36px) !important;
+        height: auto !important;
+    }
+
+    .hero-actions {
+        flex-direction: column !important;
+        gap: 16px !important;
+        width: 100% !important;
+    }
+
+    .hero-actions .btn,
+    .specs-btn {
+        width: 100% !important;
+        max-width: 100% !important;
     }
 
     .nav-links {
-        display: none !important; /* Hide standard links on mobile to avoid overflow */
+        display: none !important;
+
     }
 
     .btn-talk-expert {
         padding: 10px 16px !important;
         font-size: 14px !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
 }
 
-html, body {
+html,
+body {
     overflow-x: hidden !important;
     width: 100% !important;
     position: relative !important;
