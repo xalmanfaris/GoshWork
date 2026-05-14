@@ -30,7 +30,7 @@ body {
     width: 100%;
     max-width: 1240px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 40px;
 }
 
 section {
@@ -135,13 +135,20 @@ header.hidden {
     height: 77px;
     max-width: 1240px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 40px;
 }
 
-.logo-container {
+.nav-logo {
+    height: 60px;
+    width: auto;
+    position: relative;
+    z-index: 10;
+}
+
+.nav-right {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    gap: 40px;
 }
 
 footer .logo-container {
@@ -165,7 +172,6 @@ footer .logo-container {
     display: flex;
     align-items: center;
     gap: 8px;
-    width: 75px;
     height: 20px;
 }
 
@@ -244,12 +250,51 @@ footer .logo-container {
     color: var(--text-muted);
 }
 
-.hero-content h1 {
-    font-size: clamp(32px, 5vw, 56px);
+.hero-content h1,
+.hero-title {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 56px;
     font-weight: 700;
-    color: #1E293B;
+    line-height: 1.2;
     margin-bottom: 24px;
-    width: 100%;
+    color: #1E293B;
+}
+
+.hero-intro-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.specs-btn {
+    width: 225px;
+    height: 52px;
+    padding: 16px 16px 16px 20px;
+    font-size: 1rem;
+    border-radius: 12px;
+    border: 1px solid black;
+    color: black;
+    background: transparent;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.arrow-icon {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    transform: rotate(45deg);
+    margin-left: 4px;
 }
 
 .feature-list {
@@ -578,22 +623,19 @@ footer .logo-container {
 .specs-container {
     width: 100%;
     max-width: 1240px;
-    height: 614px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
     background: #1F2937;
     border: 1.25px solid #374151;
     border-radius: 12px;
-    box-shadow: 0px 2px 4px 0px rgba(27, 28, 29, 0.04);
-    display: flex;
     overflow: hidden;
-    opacity: 1;
-    margin: 0 auto;
 }
 
 .specs-col {
     width: 100%;
     max-width: 620px;
     height: auto;
-    min-height: 614px;
     display: flex;
     flex-direction: column;
 }
@@ -684,15 +726,14 @@ footer .logo-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
-    width: 100%;
-    max-width: 1240px;
-    height: auto;
+    width: 1240px;
+    height: 486.67px;
     margin: 0 auto;
 }
 
 .portfolio-card {
-    width: 100%;
-    height: auto;
+    width: 397.33px;
+    height: 486.67px;
     background: #FFFFFF;
     border: 1px solid #E1E3E8;
     border-radius: 20px;
@@ -705,8 +746,8 @@ footer .logo-container {
 }
 
 .portfolio-card h3 {
-    width: 100%;
-    height: auto;
+    width: 349.33px;
+    height: 34px;
     font-family: 'Urbanist', sans-serif;
     font-weight: 600;
     font-size: 28px;
@@ -716,9 +757,8 @@ footer .logo-container {
 }
 
 .portfolio-card p {
-    width: 100%;
-    height: auto;
-    min-height: 96px;
+    width: 349.33px;
+    height: 96px;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -730,23 +770,23 @@ footer .logo-container {
 }
 
 .portfolio-image-group {
-    width: 100%;
-    height: auto;
+    width: 349.33px;
+    height: 238.67px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+
 }
 
 .portfolio-card img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16/9;
+    width: 349.33px;
+    height: 174.67px;
     object-fit: cover;
     border-radius: 16px;
 }
 
 .btn-learn-more {
-    width: 100%;
+    width: 349.33px;
     height: 44px;
     background: #F7F8F9;
     border: 1px solid #E1E3E8;
@@ -810,10 +850,8 @@ footer .logo-container {
 }
 
 .expert-cta-banner {
-    width: 100%;
-    max-width: 1280px;
-    height: auto;
-    min-height: 107px;
+    width: 1280px;
+    height: 107px;
     margin: 80px auto 0;
     background: #FFFFFF;
     border: 1px solid #CFD1D4;
@@ -914,10 +952,8 @@ footer .logo-container {
     background: #FFFFFF;
     border: 1px solid #E1E3E8;
     border-radius: 10px;
-    width: 100%;
-    max-width: 1240px;
-    height: auto;
-    min-height: 144px;
+    width: 1240px;
+    height: 144px;
     margin: 0 auto;
     padding: 20px;
     display: flex;
@@ -1022,10 +1058,8 @@ footer .logo-container {
     background: #FFFFFF;
     border: 1px solid var(--footer-border);
     border-radius: 20px;
-    width: 100%;
-    max-width: 1240px;
-    height: auto;
-    min-height: 122px;
+    width: 1240px;
+    height: 122px;
     padding: 32px;
     display: flex;
     justify-content: space-between;
@@ -1203,10 +1237,8 @@ footer .logo-container {
 .contact-blue-box {
     position: relative;
     z-index: 1;
-    width: 100%;
-    max-width: 1240px;
-    height: auto;
-    min-height: 472px;
+    width: 1240px;
+    height: 472px;
     background: linear-gradient(0deg, #2B3990, #2B3990),
         linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
     border-radius: 32px;
@@ -1412,56 +1444,9 @@ footer .logo-container {
 .testimonials-grid {
     display: flex;
     gap: 24px;
-    width: max-content;
+    width: 2640px;
     padding: 0 50px;
     transition: transform 0.5s ease;
-}
-
-@media (max-width: 768px) {
-    .container, .section-content, .nav-bar {
-        padding: 0 16px;
-    }
-
-    .hero-main-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .carousel-wrapper, .carousel-container, .thumbnails {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-
-    .carousel-container {
-        height: auto !important;
-        aspect-ratio: 1/1;
-    }
-
-    .expert-cta-banner, .downloads-container, .contact-blue-box, .branded-footer-bar, .portfolio-grid {
-        width: 100% !important;
-        height: auto !important;
-        flex-direction: column !important;
-        padding: 24px !important;
-        text-align: center !important;
-    }
-
-    .download-row {
-        width: 100% !important;
-        flex-direction: column !important;
-        height: auto !important;
-    }
-
-    .testimonials-grid {
-        width: auto !important;
-        padding: 0 16px !important;
-        overflow-x: auto;
-    }
-
-    .testimonial-card {
-        width: 280px !important;
-        min-width: 280px !important;
-        height: auto !important;
-    }
 }
 
 .testimonial-card {
@@ -2642,21 +2627,125 @@ textarea:focus {
 
 @media (max-width: 640px) {
     .modal-card {
-        width: calc(100% - 32px);
-        margin: 16px;
+        width: calc(100% - 32px) !important;
+        margin: 16px !important;
     }
 
     .modal-header h3 {
-        font-size: 18px;
+        font-size: 18px !important;
     }
 
     .modal-body {
-        padding: 24px;
-        flex-direction: column !important;
-        align-items: stretch !important;
+        padding: 24px !important;
     }
 
     .btn-modal-submit {
         width: 100% !important;
     }
+}
+
+@media (max-width: 1024px) {
+    .container, .section-content, .nav-bar, .hero .section-content {
+        padding: 0 24px !important;
+        max-width: 100% !important;
+    }
+
+    .hero-main-grid {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+
+    .carousel-wrapper, .carousel-container, .thumbnails {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .carousel-container {
+        height: auto !important;
+        aspect-ratio: 1/1 !important;
+    }
+
+    .features-grid, .portfolio-grid, .process-grid, .footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+    }
+
+    .expert-cta-banner, .downloads-container, .contact-blue-box, .branded-footer-bar {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        flex-direction: column !important;
+        padding: 32px 24px !important;
+        text-align: center !important;
+    }
+
+    .expert-cta-content, .download-row, .tagline-side, .contact-info-side, .contact-form-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        text-align: center !important;
+    }
+
+    .portfolio-card, .app-card, .feature-card, .pricing-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    .specs-container {
+        flex-direction: column !important;
+        height: auto !important;
+    }
+
+    .specs-col {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    .specs-col:first-child {
+        border-right: none !important;
+        border-bottom: 1.25px solid #374151 !important;
+    }
+
+    .testimonials-grid {
+        width: auto !important;
+        padding: 0 16px !important;
+        overflow-x: auto !important;
+    }
+
+    .testimonial-card {
+        width: 280px !important;
+        min-width: 280px !important;
+        height: auto !important;
+    }
+
+    .main-footer {
+        padding-top: 40px !important;
+    }
+
+    .footer-grid {
+        gap: 40px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 32px !important;
+    }
+
+    .nav-links {
+        display: none !important; /* Hide standard links on mobile to avoid overflow */
+    }
+
+    .btn-talk-expert {
+        padding: 10px 16px !important;
+        font-size: 14px !important;
+    }
+}
+
+html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    position: relative !important;
 }
